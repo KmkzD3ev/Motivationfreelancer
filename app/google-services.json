@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "786433628967",
+    "firebase_url": "https://motivation-lite-default-rtdb.firebaseio.com",
+    "project_id": "motivation-lite",
+    "storage_bucket": "motivation-lite.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786433628967:android:ec375fd4e877bcdf3ce702",
+        "android_client_info": {
+          "package_name": "com.apx.motivationlite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786433628967-bt06eh32knmrcvf4ub69ud323g5mk4j8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw3ZCRKC6VMGAkvnSdRSzZLZsoqqHJeK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786433628967-bt06eh32knmrcvf4ub69ud323g5mk4j8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "786433628967-1e9to0haelakd2ta2jauv0qt3lho0lku.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.apx.Motivation-Lite"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786433628967:android:294b9fab67e283993ce702",
+        "android_client_info": {
+          "package_name": "com.qtm.motivation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786433628967-bt06eh32knmrcvf4ub69ud323g5mk4j8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw3ZCRKC6VMGAkvnSdRSzZLZsoqqHJeK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786433628967-bt06eh32knmrcvf4ub69ud323g5mk4j8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "786433628967-1e9to0haelakd2ta2jauv0qt3lho0lku.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.apx.Motivation-Lite"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

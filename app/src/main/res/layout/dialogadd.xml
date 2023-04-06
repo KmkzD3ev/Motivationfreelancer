@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    android:background="#00FFFFFF"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/cardbg"
+        android:orientation="vertical"
+        android:backgroundTint="@color/white">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New collection"
+        style="@style/HeadingText"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Write a name for your new collection \n You can ename it later."/>
+
+    <EditText
+        android:id="@+id/collection"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/edittextbg"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Collection name"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Cancel"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:textColor="#007AFF"
+        android:layout_height="wrap_content"
+        android:text="Cancel"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:textColor="#007AFF"
+            android:text="Save"/>
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
