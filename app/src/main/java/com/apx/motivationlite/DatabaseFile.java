@@ -5,10 +5,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.preference.Preference;
 
 import com.apx.motivationlite.Model.CollectionModel;
 
 import java.util.ArrayList;
+import java.util.prefs.Preferences;
 
 public class DatabaseFile extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "MotivationLite";
@@ -45,7 +47,9 @@ public class DatabaseFile extends SQLiteOpenHelper {
 
     private static final String word = "word";
 
-    public DatabaseFile (Context context) { super(context,DATABASE_NAME,null,2);}
+    private static final String preference ="preference";
+
+    public DatabaseFile (Context context) { super(context,DATABASE_NAME,null,3);}
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -57,6 +61,7 @@ public class DatabaseFile extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE "+ Collections +" ("+ id + " TEXT, " + quotes + " TEXT)");
         db.execSQL("CREATE TABLE "+ OwnQuotes +" ("+ id + " TEXT, " + name + " TEXT )");
         db.execSQL("CREATE TABLE "+ ForbiddenWord +" ("+ id + " TEXT, " + word + " TEXT  )");
+        db.execSQL("CREATE TABLE " + preference +" (name TEXT)");
 
     }
 
@@ -174,6 +179,14 @@ public class DatabaseFile extends SQLiteOpenHelper {
         db.update (ForbiddenWord,values,id+"=?",new String[]{Id});
         db.close();
     }
+
+    public void AddPreference (String as){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(name,as);
+        db.insert(preference , null,values);
+        db.close();
+    }
     public void deleteLiked  (String Id) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(LikedQuotes,id + "=?", new String[]{Id});
@@ -209,6 +222,14 @@ public class DatabaseFile extends SQLiteOpenHelper {
 
     }
 
+    public void deletePreference  (String Id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(preference,name+"=?",new String[]{Id});
+        db.close();
+
+    }
+
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + LikedQuotes);
@@ -218,6 +239,8 @@ public class DatabaseFile extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + Collections);
         db.execSQL("DROP TABLE IF EXISTS " + OwnQuotes);
         db.execSQL("DROP TABLE IF EXISTS " + ForbiddenWord);
+        db.execSQL("DROP TABLE IF EXISTS " + preference);
+
         onCreate(db);
     }
 
@@ -373,6 +396,24 @@ public class DatabaseFile extends SQLiteOpenHelper {
         return List;
 
     }
+    public ArrayList<String> getpreference (){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + preference,null);
+        ArrayList<String> List = new ArrayList<>();
+        if (cursor.moveToFirst()) {
+            do {
+                List.add(
+                        cursor.getString(0).toString()
+
+                );
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return List;
+
+    }
+
 
 
 

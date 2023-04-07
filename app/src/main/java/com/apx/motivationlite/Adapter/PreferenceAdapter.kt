@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.apx.motivationlite.DatabaseFile
 import com.apx.motivationlite.Model.PreferenceModel
 import com.apx.motivationlite.R
 import org.w3c.dom.Text
@@ -18,17 +19,37 @@ RecyclerView.Adapter<PreferenceAdapter.Viewholder>(){
             val linearLayout = itemView.findViewById<LinearLayout>(R.id.background)
             text.text = list.titleString
             var isSelected = false
+            var db = DatabaseFile(itemView.context)
+            if (db.getpreference().contains(list.titleString)){
+
+                linearLayout.setBackgroundResource(
+                    R.drawable.bg_prefer_selected
+                )
+                isSelected = true
+
+            }else{
+                    linearLayout.setBackgroundResource(
+                        R.drawable.bg_prefer
+                    )
+                isSelected = false
+
+            }
+
             itemView.setOnClickListener {
                 if (isSelected){
                     linearLayout.setBackgroundResource(
                         R.drawable.bg_prefer
                     )
+                    db.deletePreference(list.titleString)
                     isSelected = false
                 }else{
                     linearLayout.setBackgroundResource(
                         R.drawable.bg_prefer_selected
                     )
                     isSelected = true
+
+                    db.AddPreference(list.titleString)
+
                 }
             }
         }

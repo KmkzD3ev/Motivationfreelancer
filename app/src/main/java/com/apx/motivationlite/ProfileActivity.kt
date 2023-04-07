@@ -28,6 +28,10 @@ class ProfileActivity : AppCompatActivity() {
         collActivity.setOnClickListener {
             startActivity(Intent(this,CollActivity::class.java))
         }
+        val General = findViewById<LinearLayout>(R.id.General)
+        General .setOnClickListener {
+            startActivity(Intent(this,GeneralActivity::class.java))
+        }
 
     }
 }
