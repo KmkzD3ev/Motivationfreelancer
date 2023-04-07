@@ -17,7 +17,7 @@
         <item name="android:buttonTint">@color/yellow</item>
         <item name="android:textColor">@color/colorPrimary</item>
     </style>
-    
+
     <style name="HeadingText">
         <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
@@ -47,5 +47,20 @@
         <item name="android:textColor">@color/white</item>
 
 
+    </style>
+
+    <style name="Theme.MotivationLite.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault">
+        <!-- Radius of the outer bound of widgets to make the rounded corners -->
+        <item name="appWidgetRadius">16dp</item>
+        <!--
+        Radius of the inner view's bound of widgets to make the rounded corners.
+        It needs to be 8dp or less than the value of appWidgetRadius
+        -->
+        <item name="appWidgetInnerRadius">8dp</item>
+    </style>
+
+    <style name="Theme.MotivationLite.AppWidgetContainer" parent="Theme.MotivationLite.AppWidgetContainerParent">
+        <!-- Apply padding to avoid the content of the widget colliding with the rounded corners -->
+        <item name="appWidgetPadding">16dp</item>
     </style>
 </resources>

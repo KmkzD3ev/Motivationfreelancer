@@ -333,6 +333,47 @@ public class DatabaseFile extends SQLiteOpenHelper {
 
     }
 
+    public ArrayList<OwnModel> getown () {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + OwnQuotes,null);
+        ArrayList<OwnModel> List = new ArrayList<>();
+        if (cursor.moveToFirst()){
+            do {
+                List.add(new OwnModel(
+                                cursor.getString(0).toString(),
+                                cursor.getString(1).toString()
+
+                        )
+
+                );
+            }while(cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return List;
+    }
+
+    public ArrayList<MainModel> getcollectionitem  (String id){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + CollectionItem +  " WHERE " + CollectionId + "=?",new String[]{id});
+        ArrayList<MainModel> List = new ArrayList<>();
+        if (cursor.moveToFirst()) {
+            do {
+                List.add(new MainModel(
+                        cursor.getString(0),
+                        cursor.getString(1),
+                        cursor.getString(4),
+                        cursor.getString(2),
+                        cursor.getString(3)
+                ));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return List;
+
+    }
+
 
 
 

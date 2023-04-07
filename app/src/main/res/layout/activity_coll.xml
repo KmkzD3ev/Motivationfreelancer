@@ -5,64 +5,47 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".OwnActivity">
+    tools:context=".CollActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:gravity="center|start"
-        android:layout_marginStart="10dp"
-        android:paddingEnd="15dp"
-        android:orientation="horizontal">
+        android:padding="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp"
             android:src="@drawable/arrow_left"/>
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/HeadingText"
             android:layout_weight="1"
             android:textAlignment="textStart"
-            style="@style/HeadingText"
-            android:text="Added"/>
+            android:text="Collections"/>
 
         <ImageView
+            android:id="@+id/plusBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/search_md"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_more"/>
+            android:src="@drawable/plus"/>
 
 
     </LinearLayout>
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecView"
+        android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_weight="1"
         android:layout_height="match_parent">
-
 
     </androidx.recyclerview.widget.RecyclerView>
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/AddBtn"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/buttonbg"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        android:layout_margin="10dp"
-        android:text="Add Affirmation">
-
-    </androidx.appcompat.widget.AppCompatButton>
 
 </LinearLayout>

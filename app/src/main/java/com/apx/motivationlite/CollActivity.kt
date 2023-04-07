@@ -9,41 +9,26 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.apx.motivationlite.Adapter.CollAdapter
 import com.apx.motivationlite.Adapter.CollectionAdapter
 import com.apx.motivationlite.Model.CollectionModel
 import com.apx.motivationlite.Utilities.idgenerater
 
-class CollectionActivity : AppCompatActivity() {
-    lateinit var list: RecyclerView
-    companion object {
-        var id: String = ""
-        var title: String = ""
-        var auth: String = ""
-        var lang: String = ""
-        var cate: String = ""
-    }
-
+class CollActivity : AppCompatActivity() {
+    lateinit var list:RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.layoutcollection)
+        setContentView(R.layout.activity_coll)
 
-         list = findViewById(R.id.list)
+        list = findViewById(R.id.list)
         val linearLayoutManager = GridLayoutManager(this,1)
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         list.layoutManager = linearLayoutManager
 
         getdata()
-        id = intent.getStringExtra("id").toString()
-        title = intent.getStringExtra("title").toString()
-        auth = intent.getStringExtra("auth").toString()
-        cate = intent.getStringExtra("cate").toString()
-        lang = intent.getStringExtra("lang").toString()
-
-        Toast.makeText(this, "" + title, Toast.LENGTH_SHORT).show()
 
         var plusBtn = findViewById<ImageView>(R.id.plusBtn)
         val dialog = Dialog(this)
@@ -72,19 +57,16 @@ class CollectionActivity : AppCompatActivity() {
             dialog.show()
         }
     }
+
     fun getdata(){
         var data = ArrayList<CollectionModel>()
         data.clear()
 
         var db = DatabaseFile(this)
         data = db.getcollection()
-        list.adapter = CollectionAdapter(data)
+        list.adapter = CollAdapter(data)
 
     }
-    public fun setdata(Collectionid:String){
-        var db = DatabaseFile(this)
 
-
-     }
 
 }

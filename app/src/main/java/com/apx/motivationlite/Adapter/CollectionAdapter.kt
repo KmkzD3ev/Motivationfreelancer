@@ -26,7 +26,7 @@ RecyclerView.Adapter<CollectionAdapter.ViewHolder>() {
                 collection.AddCollectionItem(CollectionActivity.id,
                         CollectionActivity.auth, CollectionActivity.title,
                         CollectionActivity.cate, CollectionActivity.lang, list.id)
-                        Toast.makeText(itemView.context,"Saved successfully",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(itemView.context,"Saved successfully" + CollectionActivity.title,Toast.LENGTH_SHORT).show()
 //                }else{
 //                    Toast.makeText(itemView.context,"Already present in this collection ", Toast.LENGTH_SHORT).show()
 //                }

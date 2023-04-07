@@ -24,6 +24,10 @@ class ProfileActivity : AppCompatActivity() {
         OwnBtn.setOnClickListener {
             startActivity(Intent(this,OwnActivity::class.java))
         }
+        val collActivity = findViewById<LinearLayout>(R.id.collection)
+        collActivity.setOnClickListener {
+            startActivity(Intent(this,CollActivity::class.java))
+        }
 
     }
 }

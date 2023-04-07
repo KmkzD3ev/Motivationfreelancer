@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.MotivationLite.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MotivationLite.AppWidgetContainer">
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scaleType="centerCrop"
+      android:src="@drawable/cofeecup"/>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:padding="10dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="394dp"
+      android:text="People love chopping wood.In this activity one immediately sees result."
+      android:textColor="#703D28"
+      android:textSize="30sp"
+      android:textStyle="bold" />
+
+</RelativeLayout>

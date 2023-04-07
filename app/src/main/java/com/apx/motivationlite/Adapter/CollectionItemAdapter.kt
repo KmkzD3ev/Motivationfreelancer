@@ -1,4 +1,4 @@
-package com.apx.motivationlite
+package com.apx.motivationlite.Adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,15 +7,18 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.apx.motivationlite.CollectionActivity
+import com.apx.motivationlite.DatabaseFile
+import com.apx.motivationlite.MainModel
+import com.apx.motivationlite.R
 
-class OwnAdapter (val data: List<OwnModel>):
-RecyclerView.Adapter<OwnAdapter.ViewHolder>() {
-
+class CollectionItemAdapter (val data: List<MainModel>):
+RecyclerView.Adapter<CollectionItemAdapter.ViewHolder>() {
     class ViewHolder (itemView: View): RecyclerView.ViewHolder(itemView){
-        fun bind(list:OwnModel){
+        fun bind(list: MainModel){
             val textView = itemView.findViewById<TextView>(R.id.quote)
             val heartBtn = itemView.findViewById<ImageView>(R.id.heartBtn)
-            val collectBtn = itemView.findViewById<ImageView>(R.id.collectionBtn)
+            val collectionBtn = itemView.findViewById<ImageView>(R.id.collectionBtn)
             val shareBtn = itemView.findViewById<ImageView>(R.id.shareBtn)
             textView.text = list.title
 
@@ -28,30 +31,28 @@ RecyclerView.Adapter<OwnAdapter.ViewHolder>() {
             isliked = likedlist.contains(list.id)
             if (isliked){
                 heartBtn.setImageResource(R.drawable.heart1)
+
             }else{
                 heartBtn.setImageResource(R.drawable.heart)
             }
 
             heartBtn.setOnClickListener {
                 if (!isliked){
+
                     heartBtn.setImageResource(R.drawable.heart1)
-                    db.AddLiked(list.id,list.title,"","","")
+                    db.AddLiked(list.id,list.title,list.auth,list.cate,list.lang)
                     isliked = true
-                }else{
+                }else {
                     heartBtn.setImageResource(R.drawable.heart)
                     db.deleteLiked(list.id)
                     isliked = false
                 }
             }
-
-            collectBtn.setOnClickListener {
-                itemView.context.startActivity(Intent(itemView.context,CollectionActivity::class.java)
-                    .putExtra("id",list.id).putExtra("title", list.title).putExtra("auth","").putExtra("cate","")
-                    .putExtra("lang","")
-                )
+            collectionBtn.setOnClickListener {
+                itemView.context.startActivity(Intent(itemView.context, CollectionActivity::class.java).putExtra("id",list.id).putExtra("title",list.title).putExtra("auth",list.auth)
+                    .putExtra("cate",list.cate).putExtra("lang",list.lang))
             }
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -61,7 +62,6 @@ RecyclerView.Adapter<OwnAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         (holder).bind(data[position])
-
     }
 
     override fun getItemCount(): Int {
