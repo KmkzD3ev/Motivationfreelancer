@@ -12,6 +12,12 @@
         android:theme="@style/Theme.MotivationLite"
         tools:targetApi="31">
         <activity
+            android:name=".ForbiddenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GenderActivity"
+            android:exported="false" />
+        <activity
             android:name=".ContentPreActivity"
             android:exported="false" />
         <activity

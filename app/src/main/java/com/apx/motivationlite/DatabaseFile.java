@@ -414,6 +414,25 @@ public class DatabaseFile extends SQLiteOpenHelper {
 
     }
 
+    public ArrayList<ForbiddenModel> getForbidden  (){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ForbiddenWord,null);
+        ArrayList<ForbiddenModel> List = new ArrayList<>();
+        if (cursor.moveToFirst()) {
+            do {
+                List.add(new ForbiddenModel(
+                        cursor.getString(0),
+                        cursor.getString(1)
+
+                ));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return List;
+
+    }
+
 
 
 
