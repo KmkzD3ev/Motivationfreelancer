@@ -3,6 +3,7 @@ package com.apx.motivationlite
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.apx.motivationlite.Adapter.CollectionAdapter
@@ -15,6 +16,13 @@ class LikedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_liked)
+
+        var back = findViewById<ImageView>(R.id.back)
+        back.setOnClickListener {
+            onBackPressed()
+        }
+
+
 
         var listRcv = findViewById<RecyclerView>(R.id.listRcv)
 

@@ -23,7 +23,10 @@ class Intro1Fragment : Fragment() {
         val txtName = view.findViewById<EditText>(R.id.txtName)
         val continueBtn = view.findViewById<Button>(R.id.Continue)
         val skip = view.findViewById<TextView>(R.id.Skip)
-        var sharedPreferences = requireActivity().getSharedPreferences(context?.packageName, MODE_PRIVATE)
+
+
+        var sharedPreferences = requireActivity()
+            .getSharedPreferences(context?.packageName, MODE_PRIVATE)
         var edit = sharedPreferences.edit()
         continueBtn.setOnClickListener {
               if (txtName.text.isNotEmpty()){

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -88,6 +89,7 @@ class MainActivity : AppCompatActivity() {
         val dialog = BottomSheetDialog(this)
         val view = layoutInflater.inflate(R.layout.activity_categorie, null)
 
+
         val list = view.findViewById<RecyclerView>(R.id.list)
 
         val linearLayoutManager = LinearLayoutManager(this)
@@ -97,20 +99,21 @@ class MainActivity : AppCompatActivity() {
         var data = ArrayList<CategorieModel>()
         data.clear()
 
-        data.add(CategorieModel(R.drawable.wealth,"Mainfest wealth", true))
+        data.add(CategorieModel(R.drawable.wealth,"Manifest wealth", true))
         data.add(CategorieModel( R.drawable.hard_times,"Overcome hard times",true))
         data.add(CategorieModel( R.drawable.morning,"Start your day",true))
         data.add(CategorieModel( R.drawable.depression,"Fight depression",false))
         data.add(CategorieModel( R.drawable.love_relationships,"Love yourself",false))
         data.add(CategorieModel( R.drawable.favorites,"Cherish Loved Ones",false))
         data.add(CategorieModel(R.drawable.parenting,"Parenting",true))
-        data.add(CategorieModel(R.drawable.body_positivity,"Body Positivty",true))
+        data.add(CategorieModel(R.drawable.body_positivity,"Body Positivity",true))
 
         val _list =  ArrayList<CategorieLayoutModel>()
         _list.add(CategorieLayoutModel("Thought Thinking", data))
         list.adapter = CategorieLayoutAdapter(_list)
         dialog.setContentView(view)
 
+        dialog.getWindow()?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
         dialog.show()
     }
 
@@ -149,11 +152,14 @@ class MainActivity : AppCompatActivity() {
         _list.add(ThemesLayoutModel("Abstract", data))
         list.adapter = ThemesLayoutAdapter(_list)
 
+        dialog.getWindow()?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
 
         dialog.setContentView(view)
         dialog.setOnDismissListener {
             setBackground()
         }
+
+
         dialog.show()
     }
 

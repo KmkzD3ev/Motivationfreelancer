@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -19,9 +20,16 @@ class OwnActivity : AppCompatActivity() {
         layoutManager.orientation = LinearLayoutManager.VERTICAL
         RecyclerView.layoutManager = layoutManager
 
+        var back = findViewById<ImageView>(R.id.back)
+        back.setOnClickListener {
+            onBackPressed()
+        }
+
         var AddBtn = findViewById<Button>(R.id.AddBtn)
         AddBtn.setOnClickListener {
             startActivity(Intent(this, AddnewActivity::class.java))
+
+
 
         }
         getData()

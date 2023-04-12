@@ -25,18 +25,18 @@ class ForbiddenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_forbidden)
 
         list = findViewById(R.id.list)
-        val linearLayoutManager = GridLayoutManager(this,1)
+        val linearLayoutManager = GridLayoutManager(this, 1)
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         list.layoutManager = linearLayoutManager
 
 
-
-    var plusBtn = findViewById<ImageView>(R.id.plusBtn)
+        getdata()
+        var plusBtn = findViewById<ImageView>(R.id.plusBtn)
         val dialog = Dialog(this)
         plusBtn.setOnClickListener {
             dialog.setContentView(R.layout.dialogadd)
             dialog.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-             val cancel = dialog.findViewById<Button>(R.id.Cancel)
+            val cancel = dialog.findViewById<Button>(R.id.Cancel)
             val save = dialog.findViewById<Button>(R.id.Save)
             val collection = dialog.findViewById<EditText>(R.id.collection)
             cancel.setOnClickListener {
@@ -49,7 +49,10 @@ class ForbiddenActivity : AppCompatActivity() {
                 dialog.cancel()
             }
 
-            dialog.getWindow()?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT)
+            dialog.getWindow()?.setLayout(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
             dialog.setCancelable(false)
 
             dialog.show()

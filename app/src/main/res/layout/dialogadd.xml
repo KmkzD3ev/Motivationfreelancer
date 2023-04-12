@@ -9,30 +9,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="15dp"
         android:background="@drawable/cardbg"
         android:orientation="vertical"
         android:backgroundTint="@color/white">
 
-
-
     <TextView
+        android:id="@+id/newcollection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="New collection"
+        android:layout_marginBottom="10dp"
         style="@style/HeadingText"/>
 
     <TextView
+        android:id="@+id/collectiondis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
+        android:layout_marginBottom="10dp"
         android:text="Write a name for your new collection \n You can ename it later."/>
 
     <EditText
         android:id="@+id/collection"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-
+        android:layout_marginBottom="10dp"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:background="@drawable/edittextbg"

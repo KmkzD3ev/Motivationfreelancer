@@ -204,8 +204,10 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/bg_prefer_selected"
+            android:background="@drawable/buttonbg"
             android:backgroundTint="#010101"
+            android:textColor="@color/white"
+            android:layout_marginBottom="15dp"
             android:text="BuY NOw">
         </androidx.appcompat.widget.AppCompatButton>
 
@@ -218,6 +220,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textAlignment="center"
             android:text="Terms &amp; Conditions"
             />
 
@@ -225,6 +228,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Privacy POlicy"
+            android:textAlignment="center"
             android:layout_weight="1"
             />
 

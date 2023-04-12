@@ -30,6 +30,11 @@ class CollActivity : AppCompatActivity() {
 
         getdata()
 
+        var back = findViewById<ImageView>(R.id.back)
+        back.setOnClickListener {
+            onBackPressed()
+        }
+
         var plusBtn = findViewById<ImageView>(R.id.plusBtn)
         val dialog = Dialog(this)
         plusBtn.setOnClickListener {

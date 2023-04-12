@@ -18,7 +18,9 @@
 
 
         <ImageView
+            android:id="@+id/back"
             android:layout_width="wrap_content"
+            android:layout_marginEnd="10dp"
             android:layout_height="wrap_content"
             android:src="@drawable/arrow_left"/>
 
@@ -33,6 +35,7 @@
 
         <ImageView
             android:id="@+id/plusBtn"
+            android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/plus"/>

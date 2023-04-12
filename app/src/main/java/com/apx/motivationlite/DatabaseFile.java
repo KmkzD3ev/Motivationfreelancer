@@ -423,7 +423,6 @@ public class DatabaseFile extends SQLiteOpenHelper {
                 List.add(new ForbiddenModel(
                         cursor.getString(0),
                         cursor.getString(1)
-
                 ));
             } while (cursor.moveToNext());
         }

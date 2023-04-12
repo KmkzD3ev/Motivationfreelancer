@@ -3,6 +3,7 @@ package com.apx.motivationlite
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +20,11 @@ class ContentPreActivity : AppCompatActivity() {
         val linearLayoutManager = GridLayoutManager(this,2)
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         list.layoutManager = linearLayoutManager
+
+        var back = findViewById<ImageView>(R.id.back)
+        back.setOnClickListener {
+            onBackPressed()
+        }
 
         var data = ArrayList<PreferenceModel>()
         data.add(PreferenceModel("Self Care"))
