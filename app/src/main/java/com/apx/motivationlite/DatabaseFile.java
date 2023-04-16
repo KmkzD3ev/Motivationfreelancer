@@ -396,6 +396,24 @@ public class DatabaseFile extends SQLiteOpenHelper {
         return List;
 
     }
+    public ArrayList<OwnModel> getown (String id){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + OwnQuotes +  " WHERE " + name + "=?", new String[]{ id });
+        ArrayList<OwnModel> List = new ArrayList<>();
+        if (cursor.moveToFirst()) {
+            do {
+                List.add(new OwnModel(
+                      cursor.getString(0).toString(),
+                        cursor.getString(1).toString()
+                ));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return List;
+
+    }
+
     public ArrayList<String> getpreference (){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + preference,null);

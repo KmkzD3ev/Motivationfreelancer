@@ -22,12 +22,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="Configure your default theme"
         style="@style/HeadingText"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="You can change he themes later"
         style="@style/SmallText"
         android:layout_margin="20dp"/>
@@ -47,6 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_margin="20dp"
+        android:backgroundTint="@color/black"
         android:text="Got it!"
         style="@style/ButtonStyle"/>
 

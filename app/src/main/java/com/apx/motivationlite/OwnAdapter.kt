@@ -19,6 +19,20 @@ RecyclerView.Adapter<OwnAdapter.ViewHolder>() {
             val shareBtn = itemView.findViewById<ImageView>(R.id.shareBtn)
             textView.text = list.title
 
+            shareBtn.setOnClickListener {
+                itemView.context.startActivity(Intent(itemView.context, ShareActivity::class.java)
+                    .putExtra("id",  list.id)
+                    .putExtra("title", list.title)
+                    .putExtra("auth","")
+                    .putExtra("cate","")
+                    .putExtra("lang","")
+
+
+
+                )
+            }
+
+
             val db: DatabaseFile = DatabaseFile(itemView.context)
 
             var likedlist = ArrayList<String>()

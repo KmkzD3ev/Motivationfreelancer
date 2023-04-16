@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -29,6 +30,10 @@ class ForbiddenActivity : AppCompatActivity() {
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         list.layoutManager = linearLayoutManager
 
+        val back = findViewById<ImageView>(R.id.back)
+        back.setOnClickListener {
+            onBackPressed()
+        }
 
         getdata()
         var plusBtn = findViewById<ImageView>(R.id.plusBtn)
@@ -37,11 +42,21 @@ class ForbiddenActivity : AppCompatActivity() {
             dialog.setContentView(R.layout.dialogadd)
             dialog.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             val cancel = dialog.findViewById<Button>(R.id.Cancel)
-            val save = dialog.findViewById<Button>(R.id.Save)
             val collection = dialog.findViewById<EditText>(R.id.collection)
+
+            val newcollection = dialog.findViewById<TextView>(R.id.newcollection)
+            val collectiondis = dialog.findViewById<TextView>(R.id.collectiondis)
+            newcollection.text = "Add Forbidden Word"
+            collectiondis.text = ""
+            collection.hint = "Word"
+
+            val save = dialog.findViewById<Button>(R.id.Save)
+
             cancel.setOnClickListener {
                 dialog.cancel()
             }
+
+            save.text = "Add"
             save.setOnClickListener {
                 val db = DatabaseFile(this)
                 db.AddForbiddenWord(idgenerater.getId(), collection.text.toString())
@@ -57,7 +72,6 @@ class ForbiddenActivity : AppCompatActivity() {
 
             dialog.show()
         }
-
     }
 
     fun getdata(){

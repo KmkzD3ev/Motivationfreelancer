@@ -2,6 +2,7 @@ package com.apx.motivationlite
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,6 +18,12 @@ class CollItemActivity : AppCompatActivity() {
         var RecyclerView = findViewById<RecyclerView>(R.id.list)
 
         val title = findViewById<TextView>(R.id.title)
+
+        val back = findViewById<ImageView>(R.id.back)
+        back.setOnClickListener {
+            onBackPressed()
+        }
+
         title.setText(intent.getStringExtra("title").toString())
 
         var layoutManager = LinearLayoutManager(this)

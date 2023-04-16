@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bg_layout"
+
     android:layout_height="match_parent"
     tools:context=".AddnewActivity">
 
@@ -11,20 +13,21 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:gravity="center|start"
-        android:layout_marginTop="40dp"
         android:layout_marginStart="10dp"
-        android:layout_height="50dp">
+        android:layout_height="60dp">
 
         <ImageView
             android:id="@+id/back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/arrow_left"/>
+            android:src="@drawable/arrow_left"
+            app:tint="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             style="@style/HeadingText"
             android:text="Add New"/>
 
@@ -41,16 +44,19 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:padding="15dp"
+            android:textColor="@color/black"
             android:text="Write and share your own affirmations.These will only be visible to you."/>
 
         <EditText
             android:id="@+id/NewQuote"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:padding="10dp"
+            android:padding="15dp"
             android:layout_marginStart="15dp"
+            android:textColor="@color/black"
             android:layout_marginEnd="15dp"
             android:background="@color/bg_bar_light"
+            android:backgroundTint="@color/white"
             android:hint="My new quote"/>
 
         </LinearLayout>
@@ -58,6 +64,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/SaveBtn"
         android:layout_width="match_parent"
+        android:backgroundTint="@color/black"
         android:layout_height="wrap_content"
         android:background="@drawable/buttonbg"
         android:textColor="@color/white"

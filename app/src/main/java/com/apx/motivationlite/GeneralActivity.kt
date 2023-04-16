@@ -11,6 +11,7 @@ import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.browser.customtabs.CustomTabsClient
@@ -18,6 +19,7 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.browser.customtabs.CustomTabsServiceConnection
 import androidx.browser.customtabs.CustomTabsSession
 import com.apx.motivationlite.Fragments.Intro4Fragment.Companion.getdata
+import com.apx.motivationlite.Utilities.Addutilities
 
 class GeneralActivity : AppCompatActivity() {
 
@@ -28,6 +30,12 @@ class GeneralActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_general)
+
+        val back = findViewById<ImageView>(R.id.back)
+        back.setOnClickListener {
+            onBackPressed()
+        }
+
 
         var Preference = findViewById<LinearLayout>(R.id.Preference)
         Preference.setOnClickListener {
@@ -65,7 +73,7 @@ class GeneralActivity : AppCompatActivity() {
 
             val shareInent = Intent()
             shareInent.action = Intent.ACTION_SEND
-            shareInent.putExtra(Intent.EXTRA_TEXT,"Hey there! Check out this app for positive daily affirmations that’ll transform your day: ")
+            shareInent.putExtra(Intent.EXTRA_TEXT,"Hey there! Check out this app for positive daily affirmations that’ll transform your day: https://play.google.com/store/apps/details?id=com.apx.motivationlite")
             shareInent.type = "text/plain"
 
 
@@ -78,7 +86,7 @@ class GeneralActivity : AppCompatActivity() {
                 .setToolbarColor(Color.BLACK)
                 .setShowTitle(true)
                 .build()
-            customTabsIntent.launchUrl(this, Uri.parse("https://www.google.com/"))
+            customTabsIntent.launchUrl(this, Uri.parse("https://play.google.com/store/apps/dev?id=7171315800975327701"))
         }
         var Leave_Review = findViewById<LinearLayout>(R.id.Leave_Review)
         Leave_Review.setOnClickListener{
@@ -87,7 +95,7 @@ class GeneralActivity : AppCompatActivity() {
                 .setToolbarColor(Color.BLACK)
                 .setShowTitle(true)
                 .build()
-            customTabsIntent.launchUrl(this, Uri.parse("https://www.google.com/"))
+            customTabsIntent.launchUrl(this, Uri.parse("https://play.google.com/store/apps/details?id=com.apx.motivationlite"))
         }
 
         var help = findViewById<LinearLayout>(R.id.help)
@@ -97,7 +105,7 @@ class GeneralActivity : AppCompatActivity() {
                 .setToolbarColor(Color.BLACK)
                 .setShowTitle(true)
                 .build()
-            customTabsIntent.launchUrl(this, Uri.parse("https://www.google.com/"))
+            customTabsIntent.launchUrl(this, Uri.parse("mailto:dev.gurjotsingh@gmail.com"))
         }
 
         var Policy_Policy = findViewById<LinearLayout>(R.id.Policy_Policy)
@@ -107,7 +115,7 @@ class GeneralActivity : AppCompatActivity() {
                 .setToolbarColor(Color.BLACK)
                 .setShowTitle(true)
                 .build()
-            customTabsIntent.launchUrl(this, Uri.parse("https://www.google.com/"))
+            customTabsIntent.launchUrl(this, Uri.parse("https://ezenstudio.blogspot.com/2022/07/jobline-privacy-policy.html"))
         }
 
         var Terms = findViewById<LinearLayout>(R.id.Terms)
@@ -117,7 +125,7 @@ class GeneralActivity : AppCompatActivity() {
                 .setToolbarColor(Color.BLACK)
                 .setShowTitle(true)
                 .build()
-            customTabsIntent.launchUrl(this, Uri.parse("https://www.google.com/"))
+            customTabsIntent.launchUrl(this, Uri.parse("https://ezenstudio.blogspot.com/2022/07/jobline-privacy-policy.html"))
         }
 
 
@@ -161,5 +169,6 @@ class GeneralActivity : AppCompatActivity() {
         }
 
     }
+
 
 }

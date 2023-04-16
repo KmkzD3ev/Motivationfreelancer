@@ -1,33 +1,34 @@
 package com.apx.motivationlite
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.apx.motivationlite.Adapter.CategorieLayoutAdapter
 import com.apx.motivationlite.Adapter.MainAdapter
 import com.apx.motivationlite.Adapter.ThemesLayoutAdapter
-import com.apx.motivationlite.Model.CategorieLayoutModel
-import com.apx.motivationlite.Model.CategorieModel
 import com.apx.motivationlite.Model.ThemesLayoutModel
 import com.apx.motivationlite.Model.ThemesModel
+import com.apx.motivationlite.Utilities.Addutilities
 import com.apx.motivationlite.Utilities.Constant.Theme_Image
-import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.apx.motivationlite.Utilities.Constant.isPremium
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.firestore.FirebaseFirestore
+
 
 class MainActivity : AppCompatActivity() {
 
     companion object {
         lateinit var list: ViewPager2
+        var categies = ""
         fun setCategory(name: String) {
             var data = ArrayList<MainModel>()
             var db = FirebaseFirestore.getInstance()
@@ -43,11 +44,14 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var background : ImageView
 
-    fun setBackground(){
+    fun setBackground() {
         background.setBackgroundResource(Theme_Image)
-
     }
 
+    override fun onResume() {
+        super.onResume()
+        setCategory(categies)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +60,10 @@ class MainActivity : AppCompatActivity() {
         background = findViewById(R.id.background)
         list = findViewById(R.id.viewPager2)
         var data = ArrayList<MainModel>()
+
+        val banner = findViewById<LinearLayout>(R.id.bannerAdView)
+        Addutilities.loadMobileAds(this)
+        Addutilities.loadBannerAd(this, banner)
 
         var db = FirebaseFirestore.getInstance()
 
@@ -69,7 +77,7 @@ class MainActivity : AppCompatActivity() {
 
         val Categorie = findViewById<LinearLayout>(R.id.linearLayout2)
         Categorie.setOnClickListener {
-            showCategory()
+            startActivity(Intent(this,CategorieActivity::class.java))
         }
 
         val themesBtn = findViewById<LinearLayout>(R.id.themesBtn)
@@ -81,40 +89,25 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,ProfileActivity::class.java))
         }
 
+        val purchase = findViewById<LinearLayout>(R.id.purchase)
+        if (isPremium)
+            purchase.visibility = View.GONE
+        purchase.setOnClickListener {
+            startActivity(Intent(this, PurchaseActivity::class.java))
+        }
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            val w = window // in Activity's onCreate() for instance
+            w.setFlags(
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION,
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION
+            )
+            w.setFlags(
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
+            )
+        }
         setBackground()
-    }
-
-    fun showCategory() {
-        val dialog = BottomSheetDialog(this)
-        val view = layoutInflater.inflate(R.layout.activity_categorie, null)
-
-
-        val list = view.findViewById<RecyclerView>(R.id.list)
-
-        val linearLayoutManager = LinearLayoutManager(this)
-        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
-        list.setLayoutManager(linearLayoutManager)
-
-        var data = ArrayList<CategorieModel>()
-        data.clear()
-
-        data.add(CategorieModel(R.drawable.wealth,"Manifest wealth", true))
-        data.add(CategorieModel( R.drawable.hard_times,"Overcome hard times",true))
-        data.add(CategorieModel( R.drawable.morning,"Start your day",true))
-        data.add(CategorieModel( R.drawable.depression,"Fight depression",false))
-        data.add(CategorieModel( R.drawable.love_relationships,"Love yourself",false))
-        data.add(CategorieModel( R.drawable.favorites,"Cherish Loved Ones",false))
-        data.add(CategorieModel(R.drawable.parenting,"Parenting",true))
-        data.add(CategorieModel(R.drawable.body_positivity,"Body Positivity",true))
-
-        val _list =  ArrayList<CategorieLayoutModel>()
-        _list.add(CategorieLayoutModel("Thought Thinking", data))
-        list.adapter = CategorieLayoutAdapter(_list)
-        dialog.setContentView(view)
-
-        dialog.getWindow()?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
-        dialog.show()
     }
 
     fun showthemes() {

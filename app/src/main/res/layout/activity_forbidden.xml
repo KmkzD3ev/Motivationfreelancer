@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:paddingTop="40dp"
+    android:background="@drawable/bg_layout"
     android:layout_height="match_parent"
     tools:context=".ForbiddenActivity">
 
@@ -16,15 +16,18 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/arrow_left"/>
+            android:src="@drawable/arrow_left"
+            app:tint="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="textStart"
+            android:textColor="@color/black"
             style="@style/HeadingText"
             android:layout_weight="1"
             android:text="Forbidden Words"/>
@@ -34,7 +37,8 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_marginStart="10dp"
-           android:src="@drawable/plus"/>
+           android:src="@drawable/plus"
+           app:tint="@color/black" />
     </LinearLayout>
 
    <androidx.recyclerview.widget.RecyclerView

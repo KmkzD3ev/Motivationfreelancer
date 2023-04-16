@@ -5,4 +5,11 @@
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="app_widget_description">This is an app widget description</string>
+    <string name="reminders_notification_channel_id">1234</string>
+
+
+    <string name="admob_banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_interstial_id">ca-app-pub-3940256099942544/1033173712</string>
+
+
 </resources>

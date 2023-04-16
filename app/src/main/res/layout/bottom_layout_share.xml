@@ -190,7 +190,7 @@
                             
                             android:gravity="center"
                             android:lines="2"
-                            android:text="Copy_text"
+                            android:text="Copy Text"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -226,7 +226,7 @@
                             
                             android:gravity="center"
                             android:lines="2"
-                            android:text="Save_image"
+                            android:text="Save"
                             android:textSize="12sp" />
                     </LinearLayout>
 

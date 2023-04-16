@@ -9,12 +9,14 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.apx.motivationlite.Adapter.CollAdapter
 import com.apx.motivationlite.Adapter.CollectionAdapter
 import com.apx.motivationlite.Model.CollectionModel
+import com.apx.motivationlite.Utilities.Addutilities
 import com.apx.motivationlite.Utilities.idgenerater
 
 class CollActivity : AppCompatActivity() {
@@ -22,6 +24,11 @@ class CollActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_coll)
+
+        val banner = findViewById<LinearLayout>(R.id.bannerAdView)
+        Addutilities.loadMobileAds(this)
+        Addutilities.loadBannerAd(this, banner)
+
 
         list = findViewById(R.id.list)
         val linearLayoutManager = GridLayoutManager(this,1)

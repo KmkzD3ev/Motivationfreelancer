@@ -20,6 +20,17 @@ RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
 
             val db: DatabaseFile = DatabaseFile(itemView.context)
 
+            shareBtn.setOnClickListener {
+                itemView.context.startActivity(Intent(itemView.context, ShareActivity::class.java)
+                    .putExtra("id",  list.id)
+                    .putExtra("title", list.title)
+                    .putExtra("auth",list.auth)
+                    .putExtra("cate",list.cate)
+                    .putExtra("lang",list.lang)
+
+                )
+            }
+
             var likedlist = ArrayList<String>()
             likedlist = db.getlike()
             var isliked = true

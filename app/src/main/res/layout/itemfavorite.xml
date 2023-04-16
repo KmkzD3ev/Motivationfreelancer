@@ -25,6 +25,7 @@
                 android:id="@+id/quote"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 android:text="I deserve to have an amazing life."
                 />
@@ -38,21 +39,24 @@
                     android:id="@+id/heartBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/heart"/>
+                    android:src="@drawable/heart"
+                    app:tint="@color/black" />
 
                 <ImageView
                     android:id="@+id/collectionBtn"
                     android:layout_width="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/bookmark"/>
+                    android:src="@drawable/bookmark"
+                    app:tint="@color/black" />
 
                 <ImageView
                     android:id="@+id/shareBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:src="@drawable/share_01"/>
+                    android:src="@drawable/share_01"
+                    app:tint="@color/black" />
 
 
             </LinearLayout>

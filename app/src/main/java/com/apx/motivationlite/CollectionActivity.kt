@@ -72,7 +72,16 @@ class CollectionActivity : AppCompatActivity() {
 
             dialog.show()
         }
+
+
+        overridePendingTransition(R.anim.slide_in_top, R.anim.slide_in_down)
     }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_down_reverse, R.anim.slide_up_reverse)
+    }
+
     fun getdata(){
         var data = ArrayList<CollectionModel>()
         data.clear()

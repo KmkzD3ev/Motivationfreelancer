@@ -17,6 +17,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="Which is your current\ngender identity? "
         style="@style/HeadingText"/>
 
@@ -25,6 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:backgroundTint="@color/black"
         android:text="Female"
         style="@style/ButtonStyle"
         android:layout_marginEnd="20dp"
@@ -36,6 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:backgroundTint="@color/black"
         android:text="Male"
         style="@style/ButtonStyle"
         android:layout_marginEnd="20dp"
@@ -47,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:backgroundTint="@color/black"
         android:text="Others"
         style="@style/ButtonStyle"
         android:layout_marginEnd="20dp"
@@ -58,6 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:backgroundTint="@color/black"
         android:text="Prefer not to say"
         style="@style/ButtonStyle"
         android:layout_marginEnd="20dp"

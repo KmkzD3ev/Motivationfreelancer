@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.apx.motivationlite.Adapter.CollectionAdapter
 import com.apx.motivationlite.Adapter.LikedAdapter
 import com.apx.motivationlite.Model.CollectionModel
+import com.apx.motivationlite.Utilities.Addutilities
 import com.apx.motivationlite.Utilities.idgenerater
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
@@ -16,6 +18,10 @@ class LikedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_liked)
+
+        val banner = findViewById<LinearLayout>(R.id.bannerAdView)
+        Addutilities.loadMobileAds(this)
+        Addutilities.loadBannerAd(this, banner)
 
         var back = findViewById<ImageView>(R.id.back)
         back.setOnClickListener {
@@ -32,6 +38,7 @@ class LikedActivity : AppCompatActivity() {
         val db = DatabaseFile(this)
         var list = db.liked
         listRcv.adapter = LikedAdapter (list)
+
     }
 
 }

@@ -25,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:textColor="@color/black"
             android:text="Add a widget to your \nhome screen"
             style="@style/HeadingText"/>
 
@@ -32,6 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:textColor="@color/black"
             android:text="Once added, you can configure them from app"
             style="@style/SmallText"/>
 
@@ -43,6 +45,7 @@
         android:id="@+id/gotit"
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:backgroundTint="@color/black"
         android:layout_margin="20dp"
         android:text="Got it!"
         style="@style/ButtonStyle"/>

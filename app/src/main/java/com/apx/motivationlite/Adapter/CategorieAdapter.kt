@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.apx.motivationlite.MainActivity
+import com.apx.motivationlite.MainActivity.Companion.categies
 import com.apx.motivationlite.Model.CategorieModel
 import com.apx.motivationlite.PurchaseActivity
 import com.apx.motivationlite.R
@@ -30,7 +31,7 @@ RecyclerView.Adapter<CategorieAdapter.ViewHolder>(){
                 if (list.premium){
                     itemView.context.startActivity(Intent(itemView.context,PurchaseActivity::class.java))
                 } else {
-                    MainActivity.setCategory(list.title)
+                    categies = list.title
                 }
             }
         }

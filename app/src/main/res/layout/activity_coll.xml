@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bg_layout"
     android:layout_height="match_parent"
     tools:context=".CollActivity">
 
@@ -13,8 +14,7 @@
         android:layout_height="60dp"
         android:padding="10dp"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:orientation="horizontal">
 
 
         <ImageView
@@ -22,7 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_marginEnd="10dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrow_left"/>
+            android:src="@drawable/arrow_left"
+            app:tint="@color/black" />
 
 
         <TextView
@@ -30,6 +31,7 @@
             android:layout_height="wrap_content"
             style="@style/HeadingText"
             android:layout_weight="1"
+            android:textColor="@color/black"
             android:textAlignment="textStart"
             android:text="Collections"/>
 
@@ -38,10 +40,24 @@
             android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/plus"/>
+            android:src="@drawable/plus"
+            app:tint="@color/black" />
+
 
 
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bannerAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"

@@ -17,6 +17,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="What is your name?"
         style="@style/HeadingText"/>
 
@@ -26,6 +27,7 @@
         android:layout_height="55dp"
         android:layout_margin="20dp"
         android:paddingStart="12dp"
+        android:textColor="@color/black"
         android:paddingEnd="12dp"
         android:background="@drawable/edittextbg"
         android:hint="Your name"/>
@@ -35,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_margin="20dp"
+        android:backgroundTint="@color/black"
         android:text="Continue"
         style="@style/ButtonStyle"/>
 
@@ -42,6 +45,7 @@
         android:id="@+id/Skip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_margin="20dp"
         android:text="Skip for now"
         style="@style/SmallText"/>

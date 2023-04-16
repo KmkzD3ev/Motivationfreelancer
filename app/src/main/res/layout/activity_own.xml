@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bg_layout"
     android:layout_height="match_parent"
     tools:context=".OwnActivity">
 
@@ -20,33 +21,45 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="15dp"
-            android:src="@drawable/arrow_left"/>
+            android:src="@drawable/arrow_left"
+            app:tint="@color/black" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="@color/black"
             android:textAlignment="textStart"
             style="@style/HeadingText"
             android:text="Added"/>
 
         <ImageView
+            android:id="@+id/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/search_md"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_more"/>
-
+            android:src="@drawable/search_md"
+            app:tint="@color/black" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bannerAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecView"
         android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:layout_height="match_parent">
 
@@ -57,6 +70,7 @@
         android:id="@+id/AddBtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:backgroundTint="@color/black"
         android:background="@drawable/buttonbg"
         android:textColor="@color/white"
         android:textAllCaps="false"

@@ -7,4 +7,6 @@ public class Constant {
     public static String Theme_font = "";
     public static String Theme_color = "";
 
+    public static boolean isPremium = false;
+
 }

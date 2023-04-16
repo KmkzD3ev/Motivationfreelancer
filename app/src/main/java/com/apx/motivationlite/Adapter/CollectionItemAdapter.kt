@@ -7,10 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.apx.motivationlite.CollectionActivity
-import com.apx.motivationlite.DatabaseFile
-import com.apx.motivationlite.MainModel
-import com.apx.motivationlite.R
+import com.apx.motivationlite.*
 
 class CollectionItemAdapter (val data: List<MainModel>):
 RecyclerView.Adapter<CollectionItemAdapter.ViewHolder>() {
@@ -21,6 +18,19 @@ RecyclerView.Adapter<CollectionItemAdapter.ViewHolder>() {
             val collectionBtn = itemView.findViewById<ImageView>(R.id.collectionBtn)
             val shareBtn = itemView.findViewById<ImageView>(R.id.shareBtn)
             textView.text = list.title
+
+            shareBtn.setOnClickListener {
+                itemView.context.startActivity(Intent(itemView.context, ShareActivity::class.java)
+                    .putExtra("id",  list.id)
+                    .putExtra("title", list.title)
+                    .putExtra("auth",list.auth)
+                    .putExtra("cate",list.cate)
+                    .putExtra("lang",list.lang)
+
+                )
+            }
+
+
 
             val db: DatabaseFile = DatabaseFile(itemView.context)
 

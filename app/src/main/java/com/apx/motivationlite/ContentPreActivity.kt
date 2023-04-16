@@ -38,8 +38,7 @@ class ContentPreActivity : AppCompatActivity() {
 
         list.adapter = PreferenceAdapter(data)
 
-
-
     }
+
 
 }
