@@ -28,7 +28,7 @@
             android:textColor="@color/black"
             style="@style/HeadingText"
             android:textAlignment="textStart"
-            android:text="Motivation Lite"
+            android:text="Devoçao frase e Oraçoes"
             />
 
     </LinearLayout>
@@ -63,14 +63,14 @@
                         android:textStyle="bold"
                         android:layout_marginBottom="10dp"
                         android:textColor="@color/white"
-                        android:text="Try Motivation Lite Free"/>
+                        android:text="Liberte-se e Melhore seu Dia"/>
 
                     <TextView
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:textSize="12sp"
                         android:textColor="@color/white"
-                        android:text="Access all categories, quotes and themes and remove ads!"/>
+                        android:text="A palavra de Deus liberta e consola!"/>
                 </LinearLayout>
 
                 <ImageView
@@ -90,7 +90,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 style="@style/NormalText"
-                android:text="SETTINGS"/>
+                android:text="Configurações"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -123,7 +123,7 @@
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         style="@style/NormalText"
-                        android:text="General"/>
+                        android:text="Geral"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -133,36 +133,7 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/widget"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/rows_01"
-                        app:tint="@color/black" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:textAlignment="textStart"
-                        android:paddingStart="10dp"
-                        android:layout_weight="1"
-                        style="@style/NormalText"
-                        android:text="Widgets"/>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/chevron_right"
-                        app:tint="@color/black" />
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/reminder"
@@ -185,7 +156,7 @@
                         android:paddingStart="10dp"
                         android:layout_weight="1"
                         style="@style/NormalText"
-                        android:text="Remideres"/>
+                        android:text="Lembretes"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -205,7 +176,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 style="@style/NormalText"
-                android:text="Your Affirmations"
+                android:text="Mais Opções"
                 android:textAllCaps="true"/>
 
 
@@ -239,7 +210,7 @@
                         android:layout_weight="1"
                         android:paddingStart="10dp"
                         android:textColor="@color/black"
-                        android:text="Collections"
+                        android:text="Coleções"
                         android:textAlignment="textStart" />
 
                     <ImageView
@@ -269,7 +240,7 @@
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:paddingStart="10dp"
-                        android:text="Add Your Own"
+                        android:text="Escritas"
                         android:textAlignment="textStart" />
 
                     <ImageView
@@ -300,7 +271,7 @@
                         android:layout_weight="1"
                         android:paddingStart="10dp"
                         android:textColor="@color/black"
-                        android:text="Past Affirmations"
+                        android:text="Historico"
                         android:textAlignment="textStart" />
 
                     <ImageView
@@ -331,7 +302,7 @@
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:paddingStart="10dp"
-                        android:text="Favorites"
+                        android:text="Favoritos"
                         android:textAlignment="textStart" />
 
                     <ImageView

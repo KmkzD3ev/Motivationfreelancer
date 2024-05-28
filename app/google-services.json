@@ -1,82 +1,48 @@
 {
   "project_info": {
-    "project_number": "786433628967",
-    "firebase_url": "https://motivation-lite-default-rtdb.firebaseio.com",
-    "project_id": "motivation-lite",
-    "storage_bucket": "motivation-lite.appspot.com"
+    "project_number": "62564364280",
+    "project_id": "app-devocao",
+    "storage_bucket": "app-devocao.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:786433628967:android:ec375fd4e877bcdf3ce702",
+        "mobilesdk_app_id": "1:62564364280:android:d1d743665e04c5dc39f00d",
         "android_client_info": {
-          "package_name": "com.apx.motivationlite"
+          "package_name": "com.apx.Devocao"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "786433628967-bt06eh32knmrcvf4ub69ud323g5mk4j8.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCw3ZCRKC6VMGAkvnSdRSzZLZsoqqHJeK8"
+          "current_key": "AIzaSyDkRIN4xsHgVXAhAhdWO-jQh97WJd8KQJA"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "786433628967-bt06eh32knmrcvf4ub69ud323g5mk4j8.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "786433628967-1e9to0haelakd2ta2jauv0qt3lho0lku.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.apx.Motivation-Lite"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:786433628967:android:294b9fab67e283993ce702",
+        "mobilesdk_app_id": "1:62564364280:android:b23af4b29318b52e39f00d",
         "android_client_info": {
-          "package_name": "com.qtm.motivation"
+          "package_name": "com.apx.motivationlite"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "786433628967-bt06eh32knmrcvf4ub69ud323g5mk4j8.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCw3ZCRKC6VMGAkvnSdRSzZLZsoqqHJeK8"
+          "current_key": "AIzaSyDkRIN4xsHgVXAhAhdWO-jQh97WJd8KQJA"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "786433628967-bt06eh32knmrcvf4ub69ud323g5mk4j8.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "786433628967-1e9to0haelakd2ta2jauv0qt3lho0lku.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.apx.Motivation-Lite"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
-      }
+      },
+      "admob_app_id": "ca-app-pub-2290744468447929~6081892618"
     }
   ],
   "configuration_version": "1"

@@ -28,7 +28,7 @@
             android:textColor="@color/black"
             style="@style/HeadingText"
             android:textAlignment="textStart"
-            android:text="Content Preferences"
+            android:text="Preferecia de Conteudo"
             />
 
     </LinearLayout>
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:layout_marginStart="20dp"
-        android:text="Select all topics that interest you"/>
+        android:text="Selecione a Preferecia do seu conteudo"/>
 
 
     <androidx.recyclerview.widget.RecyclerView

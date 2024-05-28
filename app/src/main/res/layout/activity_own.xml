@@ -31,7 +31,7 @@
             android:textColor="@color/black"
             android:textAlignment="textStart"
             style="@style/HeadingText"
-            android:text="Added"/>
+            android:text="Adicionados"/>
 
         <ImageView
             android:id="@+id/search"
@@ -75,7 +75,7 @@
         android:textColor="@color/white"
         android:textAllCaps="false"
         android:layout_margin="10dp"
-        android:text="Add Affirmation">
+        android:text="Adicionar Composição">
 
     </androidx.appcompat.widget.AppCompatButton>
 

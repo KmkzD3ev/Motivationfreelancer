@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
             android:textColor="@color/black"
         style="@style/HeadingText"
-        android:text="Favorites"/>
+        android:text="Favoritos"/>
 
     </LinearLayout>
 

@@ -33,7 +33,7 @@
             android:textColor="@color/black"
             android:layout_weight="1"
             android:textAlignment="textStart"
-            android:text="Collections"/>
+            android:text="Coleções"/>
 
 
     </LinearLayout>

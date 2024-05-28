@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="What is your name?"
+        android:text="Qual é o Seu Nome?"
         style="@style/HeadingText"/>
 
     <EditText
@@ -30,7 +30,7 @@
         android:textColor="@color/black"
         android:paddingEnd="12dp"
         android:background="@drawable/edittextbg"
-        android:hint="Your name"/>
+        android:hint="Insira seu Nome"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Continue"
@@ -41,14 +41,7 @@
         android:text="Continue"
         style="@style/ButtonStyle"/>
 
-    <TextView
-        android:id="@+id/Skip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_margin="20dp"
-        android:text="Skip for now"
-        style="@style/SmallText"/>
+
 
 
 

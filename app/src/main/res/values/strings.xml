@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Motivation Lite</string>
+    <string name="app_name">Devoçao</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="appwidget_text">EXAMPLE</string>
@@ -8,8 +8,8 @@
     <string name="reminders_notification_channel_id">1234</string>
 
 
-    <string name="admob_banner_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="admob_interstial_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_banner_id">ca-app-pub-2290744468447929/2201044274</string>
+    <string name="admob_interstial_id">ca-app-pub-2290744468447929/5948717593</string>
 
 
 </resources>

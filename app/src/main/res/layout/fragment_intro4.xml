@@ -23,14 +23,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="Configure your default theme"
+        android:text="Escolha um Tema Incial"
         style="@style/HeadingText"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="You can change he themes later"
+        android:text="Veja a galeria de temas e escolha o que mais te agrada"
         style="@style/SmallText"
         android:layout_margin="20dp"/>
 
@@ -50,7 +50,7 @@
         android:layout_height="55dp"
         android:layout_margin="20dp"
         android:backgroundTint="@color/black"
-        android:text="Got it!"
+        android:text="Vamos la!"
         style="@style/ButtonStyle"/>
 
 </LinearLayout>

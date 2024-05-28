@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="Which is your current\ngender identity? "
+        android:text="Como vc se identifica? "
         style="@style/HeadingText"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:backgroundTint="@color/black"
-        android:text="Female"
+        android:text="Feminino"
         style="@style/ButtonStyle"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"/>
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:backgroundTint="@color/black"
-        android:text="Male"
+        android:text="Masculino"
         style="@style/ButtonStyle"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"/>
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:backgroundTint="@color/black"
-        android:text="Others"
+        android:text="Outros"
         style="@style/ButtonStyle"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"/>
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:backgroundTint="@color/black"
-        android:text="Prefer not to say"
+        android:text="Prefiro nao dizer"
         style="@style/ButtonStyle"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"/>

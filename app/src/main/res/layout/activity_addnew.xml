@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             style="@style/HeadingText"
-            android:text="Add New"/>
+            android:text="Adicionar novo"/>
 
     </LinearLayout>
 
@@ -45,7 +45,7 @@
             android:textSize="16sp"
             android:padding="15dp"
             android:textColor="@color/black"
-            android:text="Write and share your own affirmations.These will only be visible to you."/>
+            android:text="Escreva e Salve sua Anotaçoes"/>
 
         <EditText
             android:id="@+id/NewQuote"
@@ -57,7 +57,7 @@
             android:layout_marginEnd="15dp"
             android:background="@color/bg_bar_light"
             android:backgroundTint="@color/white"
-            android:hint="My new quote"/>
+            android:hint="Anotaçoes"/>
 
         </LinearLayout>
 

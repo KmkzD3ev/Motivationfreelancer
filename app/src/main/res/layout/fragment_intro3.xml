@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:textColor="@color/black"
-            android:text="Add a widget to your \nhome screen"
+            android:text="Adicione um icone a tela inicial"
             style="@style/HeadingText"/>
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:textColor="@color/black"
-            android:text="Once added, you can configure them from app"
+            android:text="Configure themas e imagens á sua vontade"
             style="@style/SmallText"/>
 
     </LinearLayout>
@@ -47,7 +47,7 @@
         android:layout_height="55dp"
         android:backgroundTint="@color/black"
         android:layout_margin="20dp"
-        android:text="Got it!"
+        android:text="Vamos lá!"
         style="@style/ButtonStyle"/>
 
 </LinearLayout>

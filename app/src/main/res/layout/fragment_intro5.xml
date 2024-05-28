@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:textColor="@color/black"
-        android:text="What areas of your life would you life to improve?"
+        android:text="Que tipo de Mensagem Prescisa hj?"
         style="@style/HeadingText"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/List"
@@ -44,7 +44,7 @@
         android:id="@+id/gotit"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Got it!"
+    android:text="Vamos la!"
         android:backgroundTint="@color/black"
         android:layout_margin="20dp"
     style="@style/ButtonStyle"/>
